@@ -1,6 +1,4 @@
-![image](https://github.com/cs-mshr/global/assets/95642555/64f966be-98f6-4133-9a23-f3e43da7ea38)Creating a detailed GitHub documentation for a project involves providing comprehensive information about the project, its purpose, setup, usage, API endpoints, and other relevant details. Below, I'll outline the sections you should include in your GitHub documentation for the Employee Management Application project:
-
-## Project Name
+Configuration And Setup Instruction in the last
 
 ### Employee Management Application
 
@@ -153,8 +151,121 @@ Explain each API endpoint, its purpose, input data format (JSON), and response d
 ## Advanced Level
 
 ### Send Email to Level 1 Manager on New Employee Addition
+  ![image](https://github.com/cs-mshr/global/assets/95642555/3fb501a1-7956-4044-9180-d0eee1724e71)
+
 
 Explain the advanced functionality to send an email to the Level 1 manager when a new employee is added.
 
 
+
+
+
+# Employee Management Application - Configuration and Setup
+
+## Introduction
+
+This document provides step-by-step instructions to configure and set up the Employee Management Application on your local development environment. The application is built using Spring Boot and MongoDB for data storage. Please follow the instructions carefully to ensure a smooth setup process.
+
+## Prerequisites
+
+Before proceeding with the setup, ensure that you have the following prerequisites installed on your system:
+
+1. Java Development Kit (JDK) 11 or higher
+2. Apache Maven
+3. MongoDB
+
+## Installation
+
+Follow the steps below to install and set up the Employee Management Application:
+
+### Step 1: Clone the Repository
+
+Open your terminal or command prompt and clone the repository using the following command:
+
+```
+git clone https://github.com/your_username/employee-management-app.git
+```
+
+### Step 2: Set up MongoDB
+
+Make sure you have MongoDB installed and running on your system. If not, download and install MongoDB from the official website: [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community)
+
+Once MongoDB is installed, start the MongoDB service using the appropriate command for your operating system.
+
+### Step 3: Configure MongoDB Connection
+
+Navigate to the `src/main/resources` directory of the cloned project and open the `application.properties` file.
+
+Replace the following properties with your MongoDB configuration:
+
+```properties
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=employee_db
+```
+
+### Step 4: Build the Application
+
+Open your terminal or command prompt and navigate to the project's root directory.
+
+Run the following Maven command to build the application:
+
+```
+mvn clean install
+```
+
+### Step 5: Run the Application
+
+After a successful build, run the application using the following command:
+
+```
+mvn spring-boot:run
+```
+
+The application will start and will be accessible at [http://localhost:8080](http://localhost:8080)
+
+Congratulations! You have successfully set up the Employee Management Application on your local development environment.
+
+## API Documentation
+
+For detailed API documentation, please refer to the [API Documentation](#api-documentation) section in the main documentation.
+
+## Advanced Level
+
+The application offers an advanced feature to send emails to Level 1 managers when a new employee is added. To enable this feature, you need to configure the email account used for sending notifications. Please follow these additional steps:
+
+### Step 1: Set Up a New Email Account
+
+Create a new Gmail account specifically for sending employee addition notifications.
+
+### Step 2: Configure Email Credentials
+
+Navigate to the `src/main/resources` directory of the cloned project and open the `application.properties` file.
+
+Replace the following properties with the credentials of the newly created email account:
+
+```properties
+email.username=your_email@gmail.com
+email.password=your_email_password
+```
+
+### Step 3: Enable Less Secure Apps
+
+Go to the Google Account Security settings and enable "Allow less secure apps" for the newly created Gmail account. This is required to allow the application to send emails using the Gmail account.
+
+## Hosting the Application
+
+For instructions on hosting the application on a free platform (e.g., Heroku, AWS Free Tier), please refer to the [Hosting the Application](#hosting-the-application) section in the main documentation.
+
+## Contributing
+
+If you wish to contribute to the project, please follow the guidelines mentioned in the [Contributing](#contributing) section in the main documentation.
+
+## License
+
+The Employee Management Application is distributed under the [MIT License](LICENSE).
+
+---
+
+By following these instructions, you can successfully configure and set up the Employee Management Application on your local machine. If you encounter any issues during the setup process, please refer to the Troubleshooting section or feel free to reach out to the project maintainers for assistance. Happy coding!
 
