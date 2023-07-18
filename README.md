@@ -1,4 +1,4 @@
-Configuration And Setup Instruction in the last
+Configuration And Setup Instruction in the last [Setup](https://github.com/cs-mshr/global/blob/main/README.md#employee-management-application---configuration-and-setup)
 
 ### Employee Management Application
 
