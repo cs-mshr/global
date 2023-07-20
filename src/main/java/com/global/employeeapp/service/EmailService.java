@@ -4,6 +4,7 @@ package com.global.employeeapp.service;
 import com.global.employeeapp.model.Employee;
 import com.global.employeeapp.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.mail.SimpleMailMessage;
@@ -16,13 +17,13 @@ import org.springframework.stereotype.Service;
 public class EmailService {
 
     private final EmployeeRepository employeeRepository;
-    private final JavaMailSender mailSender;
+
+    @Autowired
+    private JavaMailSender mailSender;
 
     @Value(value = "${spring.mail.username}")
     private String emailUsername;
 
-    @Value("${spring.mail.password}")
-    private String emailPassword;
 
     public void sendEmailToManager(Employee newEmployee) {
         String managerEmail = getManagerEmail(newEmployee);
